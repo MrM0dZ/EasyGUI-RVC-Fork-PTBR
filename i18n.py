@@ -26,3 +26,7 @@ class I18nAuto:
 
     def print(self):
         print("Usar idioma:", self.language)
+
+# Criando uma instância da classe I18nAuto com o idioma "pt_BR" forçado
+i18n = I18nAuto(language="pt_BR")
+i18n.print()
