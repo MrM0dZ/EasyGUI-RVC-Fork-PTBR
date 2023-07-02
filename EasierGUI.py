@@ -24,7 +24,7 @@ from i18n import I18nAuto
 import ffmpeg
 #from MDXNet import MDXNetDereverb
 
-i18n = I18nAuto()
+i18n = I18nAuto(language="pt_BR")  # Forçando o uso do idioma "pt_BR"
 #i18n.print()
 # Determine se existe um cartão N que pode ser usado para treinamento e raciocínio acelerado
 ngpu = torch.cuda.device_count()
