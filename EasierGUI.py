@@ -443,14 +443,14 @@ def change_choices():
         for name in files:
             if name.endswith(".index") and "treinado" not in name:
                 index_paths.append("%s/%s" % (root, name))
-    return {"choices": sorted(names), "__type__": "atualizado"}, {
+    return {"choices": sorted(names), "__type__": "update"}, {
         "choices": sorted(index_paths),
-        "__type__": "atualizado",
+        "__type__": "update",
     }
 
 
 def clean():
-    return {"valor": "", "__type__": "atualizado"}
+    return {"valor": "", "__type__": "update"}
 
 
 sr_dict = {
@@ -1682,7 +1682,7 @@ def zip_downloader(model):
     if index_found:
         return [f'./weights/{model}.pth', f'./logs/{model}/{log_file}'], "Feito"
     else:
-        return f'./weights/{model}.pth', "Não foi possível encontrar o arquivo de índice."
+        return f'./weights/{model}.pth', "Não foi possível encontrar o arquivo Index."
 
 with gr.Blocks(theme=gr.themes.Base()) as app:
     with gr.Tabs():
