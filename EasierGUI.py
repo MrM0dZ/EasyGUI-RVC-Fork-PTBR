@@ -1598,9 +1598,9 @@ def mouth(size, face, voice, faces):
         character = face.name
     else:
         if faces == 'Ben Shapiro':
-            character = 'F:\Downloads\RVC-beta\RVC-beta-v2-0618\wav2lip-HD\inputs/ben-shapiro-10.mp4'
+            character = '/content/wav2lip-HD/inputs/ben-shapiro-10.mp4'
         elif faces == 'Andrew Tate':
-            character = 'F:\Downloads\RVC-beta\RVC-beta-v2-0618\wav2lip-HD\inputs/tate-7.mp4'
+            character = '/content/wav2lip-HD/inputs/tate-7.mp4'
     output_folder = os.path.join(os.getcwd(), 'wav2lip-HD\outputs')
     output_file = os.path.join(output_folder, 'result.mp4')
     command = "python inference.py " \
@@ -1611,7 +1611,7 @@ def mouth(size, face, voice, faces):
             f"--outfile {output_file} " \
             "--fps 24 " \
             f"--resize_factor {size}"
-    process = subprocess.Popen(command, shell=True, cwd='F:\Downloads\RVC-beta\RVC-beta-v2-0618\wav2lip-HD\Wav2Lip-master')
+    process = subprocess.Popen(command, shell=True, cwd='/content/wav2lip-HD/Wav2Lip-master')
     stdout, stderr = process.communicate()
     return output_file, 'Animação concluída.'
 eleven_voices = ['Adam','Antoni','Josh','Arnold','Sam','Bella','Rachel','Domi','Elli']
