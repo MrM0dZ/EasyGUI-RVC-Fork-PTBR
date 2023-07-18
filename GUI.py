@@ -2112,7 +2112,7 @@ with gr.Blocks(theme=gr.themes.Base()) as app:
                                     interactive=True,
                                 )
                                 if_save_latest13 = gr.Radio(
-                                    label=i18n("Salvar apenas o arquivo ckpt mais recente para economizar espaço no drive.),
+                                    label=i18n("Salvar apenas o arquivo ckpt mais recente para economizar espaço no drive".),
                                     choices=[i18n("Sim"), i18n("Não")],
                                     value=i18n("Sim"),
                                     interactive=True,
