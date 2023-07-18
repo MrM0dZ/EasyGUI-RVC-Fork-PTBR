@@ -1945,7 +1945,7 @@ with gr.Blocks(theme=gr.themes.Base()) as app:
                         )
                     with gr.Row():
                         format1 = gr.Radio(
-                            label=i18n("Escolha o formato de arquivo desejado.),
+                            label=i18n("Escolha o formato de arquivo desejado".),
                             choices=["wav", "flac", "mp3", "m4a"],
                             value="flac",
                             interactive=True,
